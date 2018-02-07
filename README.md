@@ -9,7 +9,7 @@ A simple Thermometer tool that allows users to upload a **.csv** file of temprat
 - I provided a sample *.CSV* file, please make sure to provide an identical file or use the same file.
 
 *NOTE:*
-- In 'js/specs/processTest.spec.js' I am skiping the *show* function and *setAttribute* as they both have nothing to do with tests
+- In 'js/specs/processTest.spec.js' I am skiping the **show** function and **setAttribute** as they both have nothing to do with tests
 ```js
   var show = () => {
     return true;
