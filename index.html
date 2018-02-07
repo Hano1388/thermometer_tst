@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Thermometer</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
+
     <form class="form-horizontal well">
       <legend>
         <h3>
@@ -23,6 +24,15 @@
       </fieldset>
     </form>
 
+    <div class="invisible radios">
+      <form name="directionForm">
+        <label for="freezing">Freezing</label>
+        <input type="radio" onclick="directionChange(this)" name="direction" id="freezing">
+        <label for="boiling">Boiling:</label>
+        <input type="radio" onclick="directionChange(this)" name="direction" id="boiling" >
+      </form>
+    </div>
+
     <div class="container" id="output">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="celcius"></div>
@@ -31,7 +41,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="javascripts/uploader.js" charset="utf-8"></script>
+    <script src="js/src/uploader.js" charset="utf-8"></script>
+    <script src="js/src/process.js" charset="utf-8"></script>
 
   </body>
 </html>

@@ -4,9 +4,12 @@
 // HANDLING FILE UPLOAD
 
 var datapoints = [];
+// var threshold = parseInt(document.getElementById('threshold').value);
+// console.log(threshold);
 var csv;
+
 // handleFiles is a method that makes sure the browser supports file reader before we continue
-var handleFiles = files => {
+function handleFiles(files) {
 	// Check for the various File API support.
 	if (window.FileReader) {
 		// FileReader are supported.
@@ -16,27 +19,27 @@ var handleFiles = files => {
 	} else {
 		alert('FileReader are not supported in this browser.');
 	}
-};
+}
 
-var getAsText = fileToRead => {
+function getAsText(fileToRead) {
 	var reader = new FileReader();
 	// Handle errors load
 	reader.onload = loadHandler;
 	reader.onerror = errorHandler;
 	// Read file into memory as UTF-8
 	reader.readAsText(fileToRead);
-};
+}
 
-var loadHandler = event => {
+function loadHandler(event) {
 	csv = event.target.result;
+	
+	provideThreshold();
+}
 
-  // TODO: create a function to process the uploaded data
-};
-
-var errorHandler = event => {
+function errorHandler(event) {
 	if(event.target.error.name == "NotReadableError") {
 		alert("Canno't read file !");
 	}
-};
+}
 
 // END OF HANDLING FILE UPLOAD
