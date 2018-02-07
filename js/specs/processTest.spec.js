@@ -26,4 +26,18 @@
       expect(result).toBe();
     })
   });
+
+  describe('Specify Direction', () => {
+    var direction = document.forms.directionForm = {
+      freezing: { value: 0 },
+      boiling: { value: 100 }
+    };
+
+    // debugger;
+    it('Should be able to specify direction', async() => {
+      expect(direction.freezing.value).toEqual(0);
+      expect(direction.boiling.value).toEqual(100);
+    })
+  });
+  
 }());
