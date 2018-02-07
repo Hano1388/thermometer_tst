@@ -1,8 +1,8 @@
 # Thermometer
 
-<p align="center"> A simple Thermometer tool that allows users to upload a **.csv** file of temprature points </p>
+A simple Thermometer tool that allows users to upload a **.csv** file of temprature points
 
-# *How it works *
+### How it works
 - To run the program, clone the project into your directory and simply run the **index.html** file.
 - To run the tests, run **SpecRunner.html**
 
